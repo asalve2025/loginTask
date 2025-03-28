@@ -1,0 +1,91 @@
+<div class="container d-flex justify-content-center align-items-center vh-110">
+  <div class="card shadow-sm">
+    <div class="card-body p-4">
+      <h2 class="text-center mb-4">Welcome back</h2>
+
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required email
+            placeholder="Joyce@gmail.com">
+        </div>
+        <div class="mb-3 position-relative">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="password" name="password"
+              [(ngModel)]="password" required minlength="6" placeholder="Up to 8 characters">
+            <span class="input-group-text bg-transparent" (click)="showPassword = !showPassword"
+              style="cursor: pointer; margin-left: -40px; z-index: 10;">
+              <i class="fas" [class.fa-eye]="!showPassword" [class.fa-eye-slash]="showPassword"></i>
+            </span>
+          </div>
+        </div>
+        <div class="mb-3 text-center">
+          <a href="#" class="text-primary text-decoration-none">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="!loginForm.form.valid">
+          Continue
+        </button>
+
+        <div class="text-center mb-3">
+          <small class="text-muted">or</small>
+        </div>
+
+        <div class="d-grid gap-2">
+          <div class="aaa">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-secondary btn-sm mb-2" id="rr">
+                <i class="fab fa-google me-2"></i>Continue with Google
+              </button>
+            </div>
+          </div>
+          <div class="as">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-secondary btn-sm mb-2" id="rt">
+                <i class="fas fa-lightbulb"></i>Continue with Clever
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-outline-secondary btn-sm mb-2">
+            <i class="fab fa-apple me-2"></i>Continue with Apple
+          </button>
+        </div>
+
+        <!-- <div class="d-grid gap-2">
+          <div class="aaa">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-secondary btn-sm mb-2" id="rr">
+                <img src="../../../public/logo/download.png" class="social-icon">Continue with Google
+              </button>
+            </div>
+          </div>
+          <div class="as">
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-secondary btn-sm mb-2" id="rt">
+                <img src="assets/images/clever-icon.svg"  class="social-icon">Continue with Clever
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-outline-secondary btn-sm mb-2">
+            <img src="assets/images/apple-icon.svg"  class="social-icon">Continue with Apple
+          </button>
+        </div> -->
+
+
+        <div class="text-center mt-3">
+          <small>
+            Don't have an account?
+            <a href="#" class="text-primary">Register</a>
+          </small>
+        </div>
+      </form>
+
+    </div>
+    <div class="f">
+      <p> Term Of Use | Privacy Policy</p>
+    </div>
+
+
+  </div>
+</div>
