@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.sass'],
   standalone: true,
   imports: [FormsModule]
 })

@@ -6,7 +6,7 @@ import { LoginComponent } from "./login/login.component";
   selector: 'app-root',
   imports: [RouterOutlet, LoginComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.sass'
 })
 export class AppComponent {
   title = 'login';
